@@ -1,47 +1,85 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>الرحلات | مكتب الجوهرة السياحي</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>رحلاتنا السياحية</h1>
-    <p>استكشف أجمل الأماكن مع الجوهرة</p>
-    <nav>
-      <a href="index.html">الصفحة الرئيسية</a>
-    </nav>
-  </header>
+body {
+  font-family: 'Tahoma', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
 
-  <section>
-    <h2>الرحلة الأولى: العقبة إلى وادي رم</h2>
-    <p>
-      انضم إلينا في رحلة ساحرة من العقبة إلى وادي رم.  
-      <br>
-      <strong>التكلفة:</strong> 50 دينار أردني  
-      <br>
-      <strong>يشمل:</strong> إقامة في فندق + طعام  
-      <br>
-      <strong>المدة:</strong> يوم واحد
-    </p>
-  </section>
+header {
+  background-color: #006699;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-  <section>
-    <h2>الرحلة الثانية: العقبة إلى البترا</h2>
-    <p>
-      رحلة مميزة إلى مدينة البترا الوردية من العقبة.  
-      <br>
-      <strong>التكلفة:</strong> 50 دينار أردني  
-      <br>
-      <strong>يشمل:</strong> إقامة في فندق + طعام  
-      <br>
-      <strong>المدة:</strong> يوم واحد
-    </p>
-  </section>
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
 
-  <footer>
-    <p>للحجز أو الاستفسار: 079XXXXXXX</p>
-  </footer>
-</body>
-</html>
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+section {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #006699;
+}
+
+button {
+  background-color: #0099cc;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007799;
+}
+
+.details {
+  margin-top: 10px;
+  background-color: #eef9ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.phone-number {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+footer {
+  background-color: #006699;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
