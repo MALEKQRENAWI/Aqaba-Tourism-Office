@@ -1,85 +1,79 @@
-body {
-  font-family: 'Tahoma', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الرحلات | مكتب احمد القريناوي سياحي</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .details, .phone-number {
+      display: none;
+      margin-top: 10px;
+    }
 
-header {
-  background-color: #006699;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>رحلاتنا السياحية</h1>
+    <p>استكشف أجمل الأماكن مع مكتب احمد القريناوي سياحي</p>
+    <nav>
+      <a href="index.html">الصفحة الرئيسية</a>
+    </nav>
+  </header>
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
+  <section>
+    <h2>الرحلة الأولى: العقبة إلى وادي رم</h2>
+    <button onclick="toggleDetails('details1')">تفاصيل</button>
+    <button onclick="showPhone('phone1')">حجز</button>
+    <div id="details1" class="details">
+      <p>
+        انضم إلينا في رحلة ساحرة من العقبة إلى وادي رم.  
+        <br>
+        <strong>التكلفة:</strong> 50 دينار أردني  
+        <br>
+        <strong>يشمل:</strong> إقامة في فندق + طعام  
+        <br>
+        <strong>المدة:</strong> يوم واحد
+      </p>
+    </div>
+    <div id="phone1" class="phone-number">للحجز: 0780909793</div>
+  </section>
 
-header p {
-  margin-top: 10px;
-  font-size: 18px;
-}
+  <section>
+    <h2>الرحلة الثانية: العقبة إلى البترا</h2>
+    <button onclick="toggleDetails('details2')">تفاصيل</button>
+    <button onclick="showPhone('phone2')">حجز</button>
+    <div id="details2" class="details">
+      <p>
+        رحلة مميزة إلى مدينة البترا الوردية من العقبة.  
+        <br>
+        <strong>التكلفة:</strong> 50 دينار أردني  
+        <br>
+        <strong>يشمل:</strong> إقامة في فندق + طعام  
+        <br>
+        <strong>المدة:</strong> يوم واحد
+      </p>
+    </div>
+    <div id="phone2" class="phone-number">للحجز: 0780909793</div>
+  </section>
 
-nav {
-  margin-top: 15px;
-}
+  <footer>
+    <p>للحجز أو الاستفسار: 0780909793</p>
+  </footer>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
+  <script>
+    function toggleDetails(id) {
+      var el = document.getElementById(id);
+      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+    }
 
-section {
-  background-color: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  color: #006699;
-}
-
-button {
-  background-color: #0099cc;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #007799;
-}
-
-.details {
-  margin-top: 10px;
-  background-color: #eef9ff;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.phone-number {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #cc0000;
-}
-
-footer {
-  background-color: #006699;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
+    function showPhone(id) {
+      var el = document.getElementById(id);
+      el.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
