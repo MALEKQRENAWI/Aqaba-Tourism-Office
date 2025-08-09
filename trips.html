@@ -1,104 +1,207 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>الرحلات | مكتب احمد القريناوي سياحي</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    .details, .phone-number {
-      display: none;
-      margin-top: 10px;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
     }
-
-    button {
-      margin-left: 10px;
+    header {
+      background-color: #006c70;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
-    section {
-      margin: 30px;
-      padding: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+    }
+    nav a {
+      color: #ffdd57;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 12px 20px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      margin: 20px 10px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .trip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+    }
+    .trip-card {
       background-color: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-    section h2 {
+    .trip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    .trip-image {
+      width: 100%;
+      height: 180px;
+      background-color: #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+    .trip-name {
+      font-size: 1.6em;
       color: #006c70;
-      font-size: 1.8em;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
-    section p {
+    .trip-description {
       font-size: 1.1em;
       color: #555;
+      margin-bottom: 15px;
+      white-space: pre-line;
+      text-align: right;
+    }
+    .trip-number {
+      font-weight: bold;
+      color: #004a4d;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      text-align: left;
     }
     footer {
       text-align: center;
       padding: 20px;
       background-color: #006c70;
       color: white;
-      margin-top: 30px;
-    }
-    footer p {
-      font-size: 1.1em;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>رحلاتنا السياحية</h1>
-    <p>استكشف أجمل الأماكن مع مكتب احمد القريناوي سياحي</p>
     <nav>
       <a href="index.html">الصفحة الرئيسية</a>
     </nav>
   </header>
 
-  <section>
-    <h2>الرحلة الأولى: العقبة إلى وادي رم</h2>
-    <button onclick="toggleDetails('details1')">تفاصيل</button>
-    <button onclick="showPhone('phone1')">حجز</button>
-    <div id="details1" class="details">
-      <p>
-        انضم إلينا في رحلة ساحرة من العقبة إلى وادي رم.  
-        <br>
-        <strong>التكلفة:</strong> 50 دينار أردني  
-        <br>
-        <strong>يشمل:</strong> إقامة في فندق + طعام  
-        <br>
-        <strong>المدة:</strong> يوم واحد
-      </p>
-    </div>
-    <div id="phone1" class="phone-number">للحجز: 0780909793</div>
-  </section>
+  <div class="trip-container">
 
-  <section>
-    <h2>الرحلة الثانية: العقبة إلى البترا</h2>
-    <button onclick="toggleDetails('details2')">تفاصيل</button>
-    <button onclick="showPhone('phone2')">حجز</button>
-    <div id="details2" class="details">
-      <p>
-        رحلة مميزة إلى مدينة البترا الوردية من العقبة.  
-        <br>
-        <strong>التكلفة:</strong> 50 دينار أردني  
-        <br>
-        <strong>يشمل:</strong> إقامة في فندق + طعام  
-        <br>
-        <strong>المدة:</strong> يوم واحد
-      </p>
+    <div class="trip-card">
+      <div class="trip-number">1</div>
+      <div class="trip-image" id="Baqi-image"></div>
+      <div class="trip-name">رحلة البقي</div>
+      <div class="trip-description">
+مدة الرحلة: ساعة واحدة
+السعر:
+- لشخصين: 70 دينار
+- لأربعة أشخاص: 90 دينار
+      </div>
     </div>
-    <div id="phone2" class="phone-number">للحجز: 0780909793</div>
-  </section>
+
+    <div class="trip-card">
+      <div class="trip-number">2</div>
+      <div class="trip-image" id="WadiRum-image"></div>
+      <div class="trip-name">رحلة وادي رم</div>
+      <div class="trip-description">
+السعر: 45 دينار للشخص (حسب حجم المجموعة)
+تشمل الرحلة:
+- مواصلات مريحة
+- جولة في وادي رم الساحر
+- وجبات لمدة ساعتين
+- عشاء بوفيه مفتوح (Open Buffet)
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="trip-number">3</div>
+      <div class="trip-image" id="Barshwat-image"></div>
+      <div class="trip-name">رحلة برشوات</div>
+      <div class="trip-description">
+السعر:
+- لشخصين: 70 دينار
+- لشخص واحد: 40 دينار
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="trip-number">4</div>
+      <div class="trip-image" id="Diving-image"></div>
+      <div class="trip-name">رحلة الغطس</div>
+      <div class="trip-description">
+المدة: 45 دقيقة
+تشمل:
+- تصوير احترافي
+- المواصلات
+السعر: 35 دينار
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="trip-number">5</div>
+      <div class="trip-image" id="WaterGames-image"></div>
+      <div class="trip-name">رحلة الألعاب المائية (فرشة أو بنانة)</div>
+      <div class="trip-description">
+السعر: 15 دينار
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="trip-number">6</div>
+      <div class="trip-image" id="BoatTrip-image"></div>
+      <div class="trip-name">رحلة القارب</div>
+      <div class="trip-description">
+المدة: ساعتان
+تشمل: غداء
+السعر: 25 دينار
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="trip-number">7</div>
+      <div class="trip-image" id="Petra-image"></div>
+      <div class="trip-name">رحلة البتراء</div>
+      <div class="trip-description">
+السعر:  
+- بدون تذاكر: 35 دينار للشخص  
+- مع تذاكر: 85 دينار (السعر يختلف حسب عدد الأشخاص)  
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    <p>للحجز أو الاستفسار: 0780909793</p>
+    <p>© 2025 مكتب احمد القريناوي سياحي</p>
   </footer>
 
   <script>
-    function toggleDetails(id) {
-      var el = document.getElementById(id);
-      el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
-    }
-
-    function showPhone(id) {
-      var el = document.getElementById(id);
-      el.style.display = 'block';
-    }
+    document.getElementById('Baqi-image').style.backgroundImage = "url('images/Baqi.jpg')";
+    document.getElementById('WadiRum-image').style.backgroundImage = "url('images/WadiRum.jpg')";
+    document.getElementById('Barshwat-image').style.backgroundImage = "url('images/Barshwat.jpg')";
+    document.getElementById('Diving-image').style.backgroundImage = "url('images/Diving.jpg')";
+    document.getElementById('WaterGames-image').style.backgroundImage = "url('images/WaterGames.jpg')";
+    document.getElementById('BoatTrip-image').style.backgroundImage = "url('images/BoatTrip.jpg')";
+    document.getElementById('Petra-image').style.backgroundImage = "url('images/Petra.jpg')";
   </script>
 </body>
 </html>
