@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>مكتب بلازي</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,24 +73,47 @@
       color: #555;
     }
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2d353b;
-      color: white;
-      margin-top: 40px;
+      background-color: #f9f9f9;
+      padding: 15px 0;
     }
-    footer p {
-      margin: 5px 0;
-      font-size: 1.1em;
-    } 
-    section img {
-  width: 99%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  margin: 15px auto;
-}
+    footer div {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    footer a.phone {
+      background-color: #006c70;
+    }
+    footer a.phone:hover {
+      background-color: #004a4d;
+      box-shadow: 0 6px 12px rgba(0, 74, 77, 0.8);
+    }
+    footer a.whatsapp {
+      background-color: #128C7E;
+    }
+    footer a.whatsapp:hover {
+      background-color: #25D366;
+      box-shadow: 0 6px 12px rgba(37,211,102,0.8);
+    }
+    footer a.instagram {
+      background-color: #E4405F;
+    }
+    footer a.instagram:hover {
+      background-color: #f56082;
+      box-shadow: 0 6px 12px rgba(245,96,130,0.8);
+    }
   </style>
 </head>
 <body>
@@ -107,27 +130,12 @@
     <p>نحن مكتب سياحي يقع في مدينة العقبة، متخصصون في تنظيم رحلات مميزة إلى وادي رم، البتراء، البحر الميت، ومناطق أخرى ساحرة في الأردن.</p>
   </section>
 
-  <section>
-    <h2>وادي رم - جمال الصحراء</h2>
-    <img src="IMG2.jpg" alt="صورة وادي رم" />
-    <p>يعتبر وادي رم واحدًا من أشهر الوجهات السياحية في الأردن. بفضل جماله الطبيعي والمغامرات التي يقدمها، يعد المكان المثالي للرحلات الصحراوية.</p>
-  </section>
-
-  <section>
-    <h2>البتراء - المدينة الوردية</h2>
-    <img src="IMG3.jpg" alt="صورة البتراء" />
-    <p>البتراء هي واحدة من عجائب العالم السبع، وهي مدينة تاريخية منحوتة في الصخور الوردية. يمكن للزوار استكشاف العديد من المعالم التاريخية في هذه المدينة الرائعة.</p>
-  </section>
-
-  <section>
-    <h2>البحر الميت - السباحة في أدنى نقطة على وجه الأرض</h2>
-    <img src="IMG1.jpg" alt="صورة البحر الميت" />
-    <p>البحر الميت هو المكان المثالي للاسترخاء والاستمتاع بالسباحة في أدنى نقطة على سطح الأرض. المياه المالحة والغنية بالمعادن توفر تجربة فريدة من نوعها.</p>
-  </section>
-
   <footer>
-    <p>تواصل معنا: +96278000793</p>
-    <p>البريد الإلكتروني: AhmadQrenawi@gmail.com</p>
+    <div>
+      <a href="tel:+962788896413" class="phone">📞 اتصل بنا <span style="font-size: 1.2em;">➡️</span></a>
+      <a href="https://wa.me/962788896413" target="_blank" class="whatsapp">💬 واتساب <span style="font-size: 1.2em;">➡️</span></a>
+      <a href="https://instagram.com/username" target="_blank" class="instagram">📸 انستغرام <span style="font-size: 1.2em;">➡️</span></a>
+    </div>
   </footer>
 </body>
 </html>
